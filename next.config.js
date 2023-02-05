@@ -1,6 +1,17 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
 
-module.exports = nextConfig
+  /** @type {import('next').NextConfig} */
+  const nextConfig = {
+  reactStrictMode: false,
+  trailingSlash: true,
+  basePath: ".",
+  assetPrefix: "./",
+  images: {
+    domains: ["arweave.net"],
+  },
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false };
+    return config;
+  },
+};
+module.exports = nextConfig;
+  

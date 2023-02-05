@@ -4,9 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "prebuild": "pnpm clean-build && node scripts/add-asset-prefix.mjs",
+    "postbuild": "node scripts/remove-asset-prefix.mjs",
+    "build": "pnpm prebuild && next build && next export && pnpm postbuild",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "pnpm clean-build && rm -rf node_modules",
+    "clean-build": "rm -rf out*"
   },
   "dependencies": {
     "@next/font": "13.1.6",

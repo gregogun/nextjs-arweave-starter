@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is an Arweave + [Next.js](https://nextjs.org/) project template.
 
 ## Getting Started
 
@@ -14,25 +14,21 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Build & Deploy with Bundlr
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Once you've built your Next.js application, you can deploy it with bundlr using the `upload-dir` command, a pointer to the index file and other the required arguments, which will configure a path manifest for you. You can read more about how to deploy with bundlr in their [docs](https://docs.bundlr.network)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Relative path support
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Currently, if you want to have support for relative paths, you will need to omit the `/` when using relative paths to assets in the `public` folder. So instead of referencing an svg at `public/thirteen.svg` by using `/thirteen.svg` in the `src` attribute, you would instead just use `thirteen.svg`.
 
-## Learn More
+We're also working on a script that will remove any prefixed slashes within relative paths at build time, so you don't have to worry about removing slashes manually.
 
-To learn more about Next.js, take a look at the following resources:
+## Learn More about Arweave
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To learn more about Arweave and the Permaweb, take a look at the following resources:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [Permaweb Cookbook](https://cookbook.arweave.dev/) - A curated collection of developers guides & more to build on the Permaweb.
+- [Arwiki](https://arwiki.wiki/) - An in-depth guide about the Arweave Protocol.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you've never heard of Arweave, you can check out [the Arweave website](https://www.arweave.org/) for a quick introduction to the technology.
