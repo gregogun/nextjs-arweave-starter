@@ -3,8 +3,6 @@
   const nextConfig = {
   reactStrictMode: false,
   trailingSlash: true,
-  basePath: ".",
-  assetPrefix: "./",
   images: {
     domains: ["arweave.net"],
   },
