@@ -14,14 +14,23 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
-    "@types/node": "18.11.18",
-    "@types/react": "18.0.27",
-    "@types/react-dom": "18.0.10",
-    "eslint": "8.33.0",
-    "eslint-config-next": "13.1.6",
+    "arconnect": "0.4.2",
+    "arweave": "1.12.4",
+    "arweave-account": "1.3.4",
+    "arweave-graphql": "0.0.5",
+    "arweave-wallet-connector": "0.0.31",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "4.9.5"
+    "warp-contracts": "1.2.52"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "arlocal": "1.1.60",
+    "eslint": "8.33.0",
+    "eslint-config-next": "13.1.6",
+    "typescript": "4.7.4"
   }
 }
