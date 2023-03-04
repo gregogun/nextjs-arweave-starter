@@ -9,6 +9,12 @@ fs.readFile(filePath, 'utf8', (err, data) => {
     return;
   }
 
+  if (data.includes('assetPrefix: \'./\',\n')) {
+    console.log('assetPrefix property already exists in next.config.js');
+    return;
+  }
+
+
   const updatedData = data.replace(
     /const nextConfig = {/,
     `const nextConfig = {\n  assetPrefix: './',`
