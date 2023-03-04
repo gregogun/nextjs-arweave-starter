@@ -1,8 +1,8 @@
-
-  /** @type {import('next').NextConfig} */
-  const nextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: false,
   trailingSlash: true,
+  swcMinify: false,
   images: {
     domains: ["arweave.net"],
   },
@@ -12,4 +12,3 @@
   },
 };
 module.exports = nextConfig;
-  

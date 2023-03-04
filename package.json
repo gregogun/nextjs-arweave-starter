@@ -5,10 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "prebuild": "pnpm clean-build && node scripts/add-asset-prefix.mjs",
-    "postbuild": "node scripts/remove-asset-prefix.mjs",
+    "postbuild": "node scripts/remove-asset-prefix.mjs && prettier --write './next.config.js'",
     "build": "pnpm prebuild && next build && next export && pnpm postbuild",
     "start": "next start",
     "lint": "next lint",
+    "format": "prettier --write '**/*.{json,md,mjs,js,ts,jsx,tsx,yml,css}'",
     "clean": "pnpm clean-build && rm -rf node_modules",
     "clean-build": "rm -rf out*"
   },
@@ -31,6 +32,7 @@
     "arlocal": "1.1.60",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
+    "prettier": "2.8.4",
     "typescript": "4.7.4"
   }
 }
