@@ -11,16 +11,9 @@ export default function Home() {
         <link rel="icon" href="favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.description}>
-          <p>Stored permanently on Arweave ✨</p>
-        </div>
-
         <div className={styles.center}>
-          <div className={styles.thirteen}>
-            <img src="thirteen.svg" alt="13" />
-          </div>
+          <h1 className={styles.heading}>Welcome to the permaweb</h1>
         </div>
-
         <div className={styles.grid}>
           <a
             href="https://arwiki.wiki/"
